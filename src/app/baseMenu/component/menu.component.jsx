@@ -1,24 +1,30 @@
-import style from "./menu.modules.scss";
+import style from "./menu.module.scss";
 
 const Menu = () => {
   return (
     <div>
       <nav classname={style.menu}>
-        <ul>
+        <ul className={style.menuList}>
           <img classname={style.logo} src='../images/BaseTechLogo.png'></img>
-          <li>
-            <a href='#'>Home</a>
+          <li className={style.menuListItem}>
+            <a className={style.menuLink} href='#'>
+              Home
+            </a>
           </li>
-          <li>
-            <a href='#'>Teste</a>
+          <li className={style.menuListItem}>
+            <a className={style.menuLink} href='#'>
+              Teste
+            </a>
           </li>
-          <li>
-            <a href='#'>Forum</a>
+          <li className={style.menuListItem}>
+            <a href='/forum'>Forum</a>
           </li>
-          <li>
-            <a href='#'>Dashboard</a>
+          <li className={style.menuListItem}>
+            <a className={style.menuLink} href='#'>
+              Dashboard
+            </a>
           </li>
-          <li>
+          <li className={style.menuListItem}>
             <input type='text' />
             <input
               className={style.pesquisa}
