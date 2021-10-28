@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import loginView from './app/login/view/login.view';
 import Registration from './app/registration/components/registration.component';
 import Menu from './app/baseMenu/component/menu.component';
-import forumHome from './app/forum/views/forumHome/forumHome.view';
+import forumHome from './app/forum/components/forumHome/forumHome.component';
 import Questions from './app/questions/components/question.component';
 
 function App() {
