@@ -1,31 +1,49 @@
+import { useState } from "react";
+import { FormControl, InputGroup } from "react-bootstrap";
+
 const Questions = () => {
+  const [isMultpleChoice, setIsMultpleChoice] = useState();
 
-    return(
-        <form>
-        <h3>Adicionar Questão</h3>
+  const onChangeValue = (event) => {
+    setIsMultpleChoice(event.target.checked);
+    console.log(event.target.checked);
+  };
+  return (
+    <div className="container">
+      <h3>Adicionar Questão</h3>
 
-        <div className="form-group">
-          <label>Enunciado</label>
-          <input
-            type="email"
-            className="form-control"
-            placeholder="Enter email"
-          />
+      <InputGroup className="mb-3">
+        <InputGroup.Text>Enunciado</InputGroup.Text>
+        <FormControl as="textarea" aria-label="With textarea" />
+      </InputGroup>
+
+      {isMultpleChoice && (
+        <div>
+          <InputGroup className="mb-3">
+            <InputGroup.Radio name="correctAnswer" />
+            <FormControl />
+          </InputGroup>
+          <InputGroup className="mb-3">
+            <InputGroup.Radio name="correctAnswer" />
+            <FormControl />
+          </InputGroup>
+          <InputGroup className="mb-3">
+            <InputGroup.Radio name="correctAnswer" />
+            <FormControl />
+          </InputGroup>
+          <InputGroup className="mb-3">
+            <InputGroup.Radio name="correctAnswer" />
+            <FormControl />
+          </InputGroup>
+          <InputGroup className="mb-3">
+            <InputGroup.Radio name="correctAnswer" />
+            <FormControl />
+          </InputGroup>
         </div>
+      )}
+      <button className="btn btn-primary btn-block">Salvar</button>
+    </div>
+  );
+};
 
-        <div className="form-group">
-          <label>alternativa</label>
-          <input
-            className="form-control"
-            placeholder="Enter password"
-          />
-        </div>
-
-        <button type="submit" className="btn btn-primary btn-block">
-          Enviar
-        </button>
-      </form>
-    )
-}
-
-export default Questions
+export default Questions;
