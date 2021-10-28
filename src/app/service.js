@@ -1,8 +1,12 @@
 import api from "../services/api"
 
-const service = {
+const Service = {
     login: (user) => {
-        api.post('login',user)
+        api.post('login', user)
+    }, 
+    forumTitulos: () => {
+        api.get('forum');
     }
 }
-export default service
+
+export default Service

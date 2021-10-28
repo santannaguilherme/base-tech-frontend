@@ -17,7 +17,7 @@ const Menu = () => {
             </a>
           </li>
           <li className={style.menuListItem}>
-            <a href="#">Forum</a>
+            <a href="/forum">Forum</a>
           </li>
           <li className={style.menuListItem}>
             <a className={style.menuLink} href="#">

@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import loginView from './app/login/view/login.view';
 import Registration from './app/registration/components/registration.component';
 import Menu from './app/baseMenu/component/menu.component';
-
+import forumHome from './app/forum/views/forumHome/forumHome.view';
 
 function App() {
 
@@ -16,6 +16,7 @@ function App() {
         <Route exact path='/' component={loginView} />
         <Route path="/sign-in" component={loginView} />
         <Route path="/sign-up" component={Registration} />
+        <Route path="/forum" component={forumHome} />
       </Switch>
     </div></Router>
   );
