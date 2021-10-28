@@ -1,4 +1,5 @@
 import style from "./menu.modules.scss";
+
 const Menu = () => {
   return (
     <div>
